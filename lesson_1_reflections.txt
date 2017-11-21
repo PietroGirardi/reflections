@@ -1,5 +1,13 @@
+ls -a  listar arquivos ocultos tbm.
+
 diff -u game_old.js game_new.js     diff -u commit_id_old commit_id_new
 Diff entre dois arquivos:
+
+git diff (sem argumentos) compara working directory with staging area
+
+git diff --staged   :  compara staging area with repository
+
+git reset --hard  descarta alterações na working area and staging area
 
 git log
 show the log of all commits
@@ -15,7 +23,18 @@ git checkout will do this. It takes one argument - the commit ID to restore.
 
 git log will do this. It doesn't take any arguments.
 
-ls -a  listar arquivos ocultos tbm.
+git branch lista os branches
+
+git branch new_branch_name cria um novo branch com o nome passado como argumento
+
+git checkout bran_name  entra no branch com esse nome.
+
+git log --graph --oneline master coins   mostra o "grafico" dos commits comparando o branch de master(antes do novo branch) -> oq foi commitado no branch Coins -> e o mster de novo (com os commits depois de criado o branch coins)   ---- masterBeforeCoins > coins > masterAfterCoins
+
+git merge branch2 branch3
+
+git show id_commit ?? quando um merge é feito pode ser q os git commit estejam entercalados entre suas alterações e de outros devs... entao fazer um git diff entre um commit e o anterios pode nao ser oq vc espera, ja q nesse merge pode ter entrado um monte de coisa q n é interessante p vc... entao fazer git diff id2 id1 nao vai adiantar, vai mostrar muita coisa q entrou q será inútil nesse caso, entao faz um 
+git show id_commit  que compara esse commit com o commit pai... (antes desse commit no branch em q estava) ou seja n vai aparecer as coisas do merge... aparece como na hora q foi criado..
 _____________________________________________________________________
 
 
